@@ -1,20 +1,16 @@
-import { myApiKey } from './constants.js';
-import { createArticleCard } from './createArticleCard.js';
+import { myApiKey } from './constants';
+import { createArticleCard } from './createArticleCard';
+import { getNewsByChannel } from './api';
 
 const articlesPlaceholder = document.getElementById('placeholder');
 
-export function selectChannel(node) {
-    const channelId = node.srcElement.value;
-
-    fetch(`https://newsapi.org/v1/articles?source=${channelId}&apiKey=${myApiKey}`)
-        .then((res) => {
-            return res.json();
-        })
-        .then((res) => {
-            articlesPlaceholder.innerHTML = "";
-
-            res.status === "error" ?
-                articlesPlaceholder.innerHTML = "There are no available articles for this channel." :
-                res.articles.forEach(article => createArticleCard(article, articlesPlaceholder));
-        });
+export default async function selectChannel(node) {
+  const channelId = node.srcElement.value;
+  const news = await getNewsByChannel(channelId, myApiKey);
+  articlesPlaceholder.innerHTML = '';
+  if (news.status === 'error') {
+    articlesPlaceholder.innerHTML = 'There are no available articles for this channel.';
+  } else {
+    news.articles.forEach((article) => createArticleCard(article, articlesPlaceholder));
+  }
 }
