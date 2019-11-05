@@ -1,7 +1,16 @@
-import { myApiKey } from './constants';
+import { myApiKey, status, methods } from './constants';
+import { handler } from './proxyHandler';
 
-export const request = (url) => fetch(url)
-  .then((res) => res.json());
+const proxy = new Proxy({ type: methods.GET }, handler);
+
+export const request = (url) => fetch(url, proxy[methods.GET])
+  .then((res) => {
+    console.log(res);
+    if (res.statusText === status.error) {
+      throw new Error(res.statusText);
+    } else { return res.json(); }
+  })
+  .catch((error) => { throw error; });
 
 export const getAllChannels = () => {
   const url = `https://newsapi.org/v2/sources?apiKey=${myApiKey}`;
