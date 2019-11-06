@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>News observer</title>
+</head>
+<body>
+  <div class='wrapper'>
+    <button id='lazy-load-js-css'>Show News</button>
+    <header class='header'>
+      <div class="inner-container">
+        <div class="header-container">
+          <h1 class='header-title'>News observer</h1>
+          <div class="search-section">
+            <select id="channels-select" class="channels-select">
+              <option value="" disabled selected>Select channel...</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="news-placeholder">
+      <div class="inner-container">
+        <div id="placeholder" class="news-placeholder-container">
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src='./src/components/lazyLoadingScript.js'></script>
+</body>
+</html>
