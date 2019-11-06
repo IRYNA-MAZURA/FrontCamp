@@ -1,5 +1,5 @@
-import selectChannel from './selectChannel';
-import fillingAllChannels from './getAllChannels';
+import selectChannel from './api/selectChannel';
+import fillingAllChannels from './api/getAllChannels';
 import '../styles/reset.less';
 import '../styles/style.less';
 

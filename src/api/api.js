@@ -1,5 +1,5 @@
-import { myApiKey, status, methods } from './constants';
-import { handler } from './proxyHandler';
+import { myApiKey, status, methods } from '../constants/constants';
+import { handler } from './handlers/proxyHandler';
 
 const proxy = new Proxy({ type: methods.GET }, handler);
 

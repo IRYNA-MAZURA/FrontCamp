@@ -1,4 +1,4 @@
-import { methods } from './constants';
+import { methods } from '../../constants/constants';
 
 export default function requestFactory(type, body) {
   const requestObject = { method: type };

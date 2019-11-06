@@ -1,7 +1,7 @@
-import { myApiKey } from './constants';
-import { createArticleCard } from './createArticleCard';
+import { myApiKey } from '../constants/constants';
+import { createArticleCard } from '../components/createArticleCard';
 import { getNewsByChannel } from './api';
-import errorsHandler from './errorsHandler';
+import errorsHandler from '../components/errorsHandler';
 
 const articlesPlaceholder = document.getElementById('placeholder');
 
