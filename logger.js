@@ -1,11 +1,27 @@
-const winston = require('winston');
+let winston = require('winston');
+
+let logFormat = {
+    format: winston.format.combine(
+        winston.format.colorize(),
+        winston.format.json()
+    )
+};
+
+let logOptions = {
+	file: {
+        level: 'info',
+        filename: `file.log`,
+        handleExceptions: true,
+        json: true,
+        maxsize: 1048576,
+        maxFiles: 1,
+        colorize: true,
+      }
+}
 
 module.exports = winston.createLogger({
-  format: winston.format.combine(
-    winston.format.timestamp('YYYY-MM-DD HH:mm:ss.SSSS'),
-    winston.format.json(),
-  ),
-  transports: [
-    new winston.transports.File({ timestamp: true, filename: 'file.log' })
-  ]
-});
+    logFormat,
+    transports: [
+      new winston.transports.File(logOptions.file),
+    ]
+});;

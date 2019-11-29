@@ -1,6 +1,7 @@
 const express = require('express');
 const newsData = require('./newsData');
 const router = express.Router();
+const fs = require('fs');
 
 router.get('/', function (req, res, next) {
   const newsList = newsData.sources;
@@ -60,6 +61,9 @@ router.delete('/:id', function(req, res) {
   }
 
   newsData.sources = newsData.sources.filter(news => news.id !== req.params.id);
+
+  let data = JSON.stringify(newsData.sources);
+  fs.writeFileSync('resultOfDelete.json', data);
 
   res.status(200).send('Data successfully deleted');
 });
