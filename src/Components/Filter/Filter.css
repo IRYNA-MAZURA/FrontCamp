@@ -1,0 +1,17 @@
+.filter {
+    display: flex;
+    align-items: center;
+    font-weight: 100;
+}
+
+.filter-buttons-container {
+    margin-left: 10px;
+}
+
+.filter-button {
+    border: 0;
+}
+
+.active-button {
+    background-color: chocolate;
+}

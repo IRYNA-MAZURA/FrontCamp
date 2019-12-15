@@ -1,0 +1,19 @@
+.image{
+    width: 250px;
+    margin: 0 15px;
+}
+
+.film-card-container {
+    text-align: center;
+}
+
+.film-card-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+.film-card-genre {
+    text-align: start;
+    padding: 0 15px;
+}

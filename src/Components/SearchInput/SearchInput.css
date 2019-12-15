@@ -1,0 +1,19 @@
+.search-input-container {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.input {
+    width: 75%;
+    border: 0;
+    padding-left: 10px;
+}
+
+.button {
+    width: 20%;
+    border: 0;
+    background-color: chocolate;
+}
