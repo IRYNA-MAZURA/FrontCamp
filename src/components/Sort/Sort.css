@@ -1,0 +1,13 @@
+.sort {
+  text-align: right;
+  background-color: #424242;
+  padding: 20px 5% 20px 0;
+}
+
+.sort-span {
+  text-transform: uppercase;
+  font-size: 18px;
+  padding-right: 10px;
+  font-weight: 100;
+  color: #FFFFFF;
+}
