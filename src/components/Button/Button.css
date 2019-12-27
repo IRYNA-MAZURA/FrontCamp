@@ -1,0 +1,35 @@
+button {
+  background-color: #555555;
+  border: none;
+  color: #FFFFFF;
+  padding: 5px 20px;
+  font-size: 18px;
+  font-weight: 100;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+}
+
+button:active,
+button:focus 
+{
+  outline: none;
+}
+
+.main {
+  border-radius: 5px;
+  font-size: 24px;
+  padding: 10px 40px;
+}
+
+.left {
+  border-radius: 3px 0 0 3px;
+}
+
+.right {
+  border-radius: 0 3px 3px 0;
+}
+
+.active {
+  background-color: #F65261;
+}
