@@ -10,11 +10,15 @@ import { IArticle } from 'src/app/models';
 })
 export class MainComponent implements OnInit {
 
+  private maxArticlesNumber = 4;
   public articles: IArticle[] = articles;
-
+  
   constructor() { }
 
   ngOnInit() {
+    
   }
+
+  increaseMaxArticlesNumber = () => this.maxArticlesNumber += 4;
 
 }

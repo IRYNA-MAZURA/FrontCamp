@@ -12,4 +12,8 @@ export class EditModeComponent implements OnInit {
   ngOnInit() {
   }
 
+  saveArticle(): void {
+    console.log('Saved');
+  }
+
 }

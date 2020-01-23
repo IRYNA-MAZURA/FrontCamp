@@ -55,8 +55,8 @@ export const articles: IArticle[] = [
   },
   {
     source: {
-        id: `abc-news`,
-        name: `ABC News`
+        id: `bbc-news`,
+        name: `BBC News`
     },
     author: `Cheyenne Haslett`,
     title: `Presidential candidate Amy Klobuchar refutes Trump questioning whether climate change is real`,

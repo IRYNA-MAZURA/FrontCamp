@@ -11,7 +11,7 @@ import { EditModeComponent } from './edit-mode/edit-mode.component';
 import { SelectNewsModeComponent } from './select-news-mode/select-news-mode.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { ArticleComponent } from './article/article.component';
+import { ArticleModule } from './article/article.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 const appRoutes: Routes = [
@@ -31,7 +31,6 @@ const appRoutes: Routes = [
     SelectNewsModeComponent,
     HeaderComponent,
     FooterComponent,
-    ArticleComponent,
     NotFoundComponent,
   ],
   imports: [
@@ -39,6 +38,7 @@ const appRoutes: Routes = [
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    ArticleModule,
     RouterModule.forRoot(appRoutes),
   ],
   providers: [],

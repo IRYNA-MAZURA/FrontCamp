@@ -12,7 +12,7 @@
 </mat-toolbar>
 <div *ngIf="this.router.url === '/'" class="header__navigation">
   <mat-select placeholder="Select" class="header__navigation-select">
-    <mat-option value="option">Option</mat-option>
+    <mat-option *ngFor="let article of articles" value={{article.source.id}}>{{article.source.name}}</mat-option>
   </mat-select>
   <div class="header__navigation-input-wrapper">
     <mat-form-field>
