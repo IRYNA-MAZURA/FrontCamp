@@ -1,0 +1,33 @@
+<div class="header__info">
+  <div class="header__logo">
+    <span class="header__logo-image"></span>
+    <span class="header__logo-text">Aggregator Logo</span>
+  </div>
+  <div class="header__login">
+    <button *ngIf="!this.isLoggedIn" mat-raised-button class="header__login-button" (click)="login()">Log In</button>
+    <button *ngIf="this.isLoggedIn" mat-raised-button class="header__login-button" (click)="logout()">Log Out</button>
+  </div>
+</div>
+<mat-toolbar *ngIf="!!this.selectedSource" class="header__caption">
+  <h2 *ngIf="!this.checked && this.router.url !== '/add'">{{this.selectedSource.name}}</h2>
+  <h2 *ngIf="this.checked || this.router.url === '/add'">Local News</h2>
+</mat-toolbar>
+<div *ngIf="this.router.url === '/'" class="header__navigation">
+  <mat-select
+    placeholder="Select"
+    class="header__navigation-select"
+    [ngModel]="selectedSource"
+    (ngModelChange)="onChange($event)"
+    [disabled]="this.checked"
+  >
+    <mat-option *ngFor="let source of sources" [value]="source">{{source.name}}</mat-option>
+  </mat-select>
+  <div class="header__navigation-input-wrapper">
+    <mat-form-field>
+      <input matInput placeholder="Type your text..." [(ngModel)]="data">
+    </mat-form-field>
+    <button mat-raised-button (click)="filterArticles()">Filter</button>
+  </div>
+  <mat-checkbox (change)="toggle($event)" [checked]="this.checked">Only created by me</mat-checkbox>
+  <button mat-raised-button routerLink="/add" (click)="resetCurrentArticleId()">Add Article</button>
+</div>

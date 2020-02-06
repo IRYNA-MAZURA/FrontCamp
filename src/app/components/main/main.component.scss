@@ -1,0 +1,14 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 20px auto;
+
+  &__list {
+    margin-bottom: 20px;
+  }
+
+  &__button {
+    width: 100%;
+  }
+}
