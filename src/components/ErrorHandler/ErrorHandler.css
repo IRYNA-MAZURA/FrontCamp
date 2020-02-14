@@ -1,0 +1,16 @@
+.error {
+  position: fixed;
+  display: none;
+  min-width: 200px;
+  min-height: 100px;
+  right: 10px;
+  bottom: 10px;
+  background-color: #232323;
+  color: #F65261;
+}
+
+.active-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component snapshot testing 1`] = `
+<header>
+  <div
+    className="logo"
+  >
+    <a
+      className="logo-link"
+      href="/"
+      onClick={[Function]}
+    >
+      <strong>
+        netflix
+      </strong>
+      roulete
+    </a>
+  </div>
+  <div
+    className="search"
+  >
+    <div
+      className="search-title"
+    >
+      <h2>
+        find your movie
+      </h2>
+    </div>
+    <div
+      className="search-text"
+    >
+      <input
+        className="search-text-input"
+        defaultValue="Harry Potter"
+        name="search"
+        onChange={[Function]}
+        placeholder="Search"
+        type="text"
+      />
+      <a
+        href="/title/"
+        onClick={[Function]}
+      >
+        <button
+          className="main active"
+          onClick={[Function]}
+        >
+          Search
+        </button>
+      </a>
+    </div>
+    <div
+      className="search-type"
+    >
+      <span>
+        search by
+      </span>
+      <button
+        className="left active"
+        onClick={[Function]}
+      >
+        title
+      </button>
+      <button
+        className="right"
+        onClick={[Function]}
+      >
+        genre
+      </button>
+    </div>
+  </div>
+</header>
+`;

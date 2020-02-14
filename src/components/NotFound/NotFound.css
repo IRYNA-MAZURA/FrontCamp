@@ -1,0 +1,11 @@
+.not-found {
+  background-color: #232323;
+  display: flex;
+  min-height: 100vh;
+}
+
+.not-found-message {
+  margin: auto;
+  color: #FFFFFF;
+  font-size: 48px;
+}

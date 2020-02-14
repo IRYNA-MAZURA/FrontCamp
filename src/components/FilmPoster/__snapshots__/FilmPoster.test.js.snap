@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilmPoster component snapshot testing 1`] = `
+<a
+  className="filmLink"
+  href="/movie/1"
+  onClick={[Function]}
+>
+  <div
+    className="film"
+  >
+    <div
+      className="film-img"
+    >
+      <img
+        alt=""
+        src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ebay.com.au%2Fitm%2FHARRY-POTTER-AND-THE-SORCERERS-STONE-MOVIE-POSTER-INTERNATIONAL-REGULAR-%2F122009198081&psig=AOvVaw1LDt0EqIHiVP4X7gHBXHY1&ust=1581665271313000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJjn8beAzucCFQAAAAAdAAAAABAI"
+      />
+    </div>
+    <div
+      className="film-info"
+    >
+      <div
+        className="info-left"
+      >
+        <div
+          className="title"
+        >
+          Harry Potter
+        </div>
+        <div
+          className="genres"
+        >
+          fantasy
+        </div>
+      </div>
+      <div
+        className="info-right"
+      >
+        <div
+          className="year"
+        >
+          20/03/2000
+        </div>
+      </div>
+    </div>
+  </div>
+</a>
+`;
