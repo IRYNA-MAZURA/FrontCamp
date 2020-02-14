@@ -1,0 +1,8 @@
+.films {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #232323;
+  padding: 40px 0;
+}
